@@ -1,0 +1,11 @@
+.main-banner:before {
+    content: '';
+    background-image: url(../images/homeImage.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    width: 650px;
+    height: 550px;
+  }

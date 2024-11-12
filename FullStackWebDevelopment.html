@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .logo{
+    height: 60px;
+    width: 60px;
+  }
+  
+  /* General styles for the icon */
+  .elementor-icon-list-icon svg {
+    fill: #00a2ff; /* Golden yellow color */
+    width: 16px;  /* Size: 16px width */
+    height: 16px; /* Size: 16px height */
+    transition: fill 0.3s ease; /* Smooth transition for color changes */
+  }
+
+  /* Hover effect for the icon */
+  .elementor-icon-list-item:hover .elementor-icon-list-icon svg {
+    fill: #FFC107; /* A slightly lighter golden shade on hover */
+  }
+  .elementor-widget-container{
+    text-align: center;
+    padding: 20px;
+  }
+  .elementor-icon-list-item {
+    align-items: center; /* Aligns items in the center vertically */
+    margin-right: 10px;
+    margin-bottom: 10px; /* Adjust the value as needed */
+    padding-left: 20px;  /* Consistent padding for all items */
+    position: relative;
+  }
+  .main-banner {
+  padding: 50px 0;
+  background-color: #f8f9fa; /* Light background for a professional look */
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #1e90ff, #32cd32);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.content-image-section .row {
+  margin-top: 40px;
+}
+
+img.img-fluid {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .content-image-section .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .image {
+    margin-top: 20px;
+  }
+}
+/* Flexbox container for three cards side by side */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px; /* Adjust gap as needed */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    padding: 20px;
+}
+
+/* Card flip setup */
+.card-flip {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease, background-color 0.6s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* Initial front color - white */
+.card-front {
+    background-color: #7bccec; /* White color for the front */
+    transform: rotateY(0deg);
+}
+
+/* Back color - orange */
+.card-back {
+    background-color: #ecbedbd2; /* Orange color for the back */
+    transform: rotateY(180deg);
+}
+
+.card-flip:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.card-flip:hover .card-back {
+    transform: rotateY(0deg);
+}
+/* General rule to remove extra margins/paddings */
+.card-container {
+margin: 0; /* Remove default margin */
+padding: 0; /* Remove default padding */
+}
+
+/* Specific spacing adjustments for your sections */
+#services,
+#about,
+#portfolio {
+margin: 0; /* Remove default margin */
+padding: 0; /* Remove default padding */
+}
+
+/* If there’s extra space around images */
+img {
+margin: 0; /* Remove margin around images */
+padding: 0; /* Remove padding around images */
+}
+
+/* Row spacing adjustment if needed */
+.row {
+margin: 0; /* Adjust the default margin */
+padding: 0; /* Adjust the default padding */
+}
+
+/* Section-specific rules */
+.section {
+margin-top: 0; /* Remove top margin */
+margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Inner content styling */
+.card-content {
+    text-align: center;
+}
+
+.btn {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.cls{
+  text-align: center;
+  padding: 20px;
+  color: #d471b0d2;
+}
+  </style>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Development</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-onix-digital.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    
+</head>
+<body>
+    <header class="header-area wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+      <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="main-nav">
+                <!-- ***** Logo Start ***** -->
+                <a href="index.html" class="logo">
+                  <img src="assets/images/1.png">
+                </a>
+                <!-- ***** Logo End ***** -->
+                <!-- ***** Menu Start ***** -->
+                <ul class="nav">
+                  <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                  <li class="scroll-to-section mega-menu-link">
+                    <a href="#services">Services<span class="mega-indicator">▼</span></a>
+                    <ul class="sub-menu">
+                      <li><a href="WebAppDevelopment.html">Web App Development</a></li>
+                      <li><a href="MobileAppDevelopment.html">Mobile App Development</a></li>
+                      <li><a href="FullStackWebDevelopment.html">Full Stack Web Development</a></li>
+                      <li><a href="ProductDevelopment.html">Product Development</a></li>
+                      <li><a href="AppSupportAndMaintenance.html">App Support & Maintenance</a></li>
+                      <li><a href="UX.html">UI/UX & Frontend Development</a></li>
+                    </ul>
+                </li>
+    
+                <!-- About Menu with Submenus -->
+                <li class="scroll-to-section mega-menu-link">
+                    <a href="#about">About<span class="mega-indicator">▼</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="#career">Career</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </li>
+    
+                <!-- Solutions Menu with Submenus -->
+                <li class="scroll-to-section mega-menu-link">
+                    <a href="#solutions">Solutions<span class="mega-indicator">▼</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="#dx">DX</a></li>
+                        <li><a href="#fx">FX</a></li>
+                        <li><a href="#mx">MX</a></li>
+                    </ul>
+                </li>
+    
+                <!-- Static Menu Items -->
+                <li class="scroll-to-section"><a href="#blogs">Blogs</a></li>
+                <li class="scroll-to-section"><a href="#insights">Insights</a></li>
+                <li class="scroll-to-section last-menu-item"><div class="main-red-button-hover"><a href="#contact">Contact Us Now</a></div></li> 
+            </ul>
+    
+            <a class="menu-trigger">
+                <span>Menu</span>
+            </a>
+                <!-- ***** Menu End ***** -->
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!--Breadcrumb: Navigation path-->
+      <nav class="m-3">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Service</a></li>
+            <li class="breadcrumb-item active"><a>Full Stack Web Development</a></li>
+        </ol>
+      </nav>
+      </header>
+      <!-- ***** Header Area End ***** -->
+<!-- Main Content -->
+<div class="main-banner" id="web-development">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <!-- Icon List Section: Keep the same as before -->
+          <div class="elementor-widget-container">
+            <h1 class="elementor-heading-title elementor-size-default">Full stack Web Development</h1><br>
+            <h2>“Complete, end-to-end solutions for both front-end beauty and back-end power.”</h2><br>
+            <!-- <div class="elementor-element elementor-widget elementor-widget-icon-list">
+              <div class="elementor-widget-container">
+                <ul class="elementor-icon-list-items">
+                  <li class="elementor-icon-list-item">
+                    <span class="elementor-icon-list-icon">
+                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" width="16" height="16" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+                      </svg>
+                    </span>
+                    <span class="elementor-icon-list-text">Responsive Design</span>
+                  </li>
+                  <li class="elementor-icon-list-item">
+                    <span class="elementor-icon-list-icon">
+                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" width="16" height="16" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+                      </svg>
+                    </span>
+                    <span class="elementor-icon-list-text">Security Optimization</span>
+                  </li>
+                  <li class="elementor-icon-list-item">
+                    <span class="elementor-icon-list-icon">
+                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" width="16" height="16" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+                      </svg>
+                    </span>
+                    <span class="elementor-icon-list-text">Scalability</span>
+                  </li>
+                </ul>
+              </div>
+            </div> -->
+          </div>
+          <!-- Content and Image Section -->
+          <div class="col-lg-12 content-image-section">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <p class="gradient-text">
+                  At Masgarti Solution, Full Stack Web Development is more than just a service—it’s a fundamental part of our commitment to delivering comprehensive, high-quality digital solutions. Our team consists of full stack developers who are not only skilled across front-end and back-end technologies but are also deeply knowledgeable about what makes a web application successful from end to end.
+                  <br><br>
+                  We place a strong emphasis on nurturing a solution-driven mindset across our team, because we believe that a thoughtful, user-first approach is essential for building powerful web applications. This means we continuously evaluate the "why" behind every decision, consider how users will interact with the app, and stay actively involved in shaping the app's features and functionality.
+                  <br><br>
+                  Our mission goes beyond providing top-notch web development services; we strive to be a vital part of our clients’ teams, collaborating closely to help them realize their digital goals and deliver meaningful experiences to their users.
+                  <br><br>
+                  Let us help bring your web application ideas to life and create a solution that drives real results.
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <img src="assets/images/FullStackWebDevelopment.jpg" alt="Full Stack Web Development" class="img-fluid rounded" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Heading 1 -->
+<h1 class="cls">End-to-End Web Solutions</h1>
+<div class="card-container">
+  <!-- Card 1 -->
+  <div class="card-flip">
+      <div class="card-front">
+          <div class="card-content">
+              <h3>Comprehensive Development</h3>
+              <p>Drive success with comprehensive development and continuous enhancements.</p>
+          </div>
+      </div>
+      <div class="card-back">
+        <div class="card-content">
+            <p>We deliver complete web solutions, from initial concept to final deployment, ensuring a seamless user experience.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </div>
+</div>
+  <!-- Card 2 -->
+  <div class="card-flip">
+    <div class="card-front">
+        <div class="card-content">
+            <h3>Technology Stack Expertise</h3>
+            <p>Leverage our technology stack expertise for cutting-edge solutions and continuous enhancements.</p>
+        </div>
+    </div>
+    <div class="card-back">
+        <div class="card-content">
+            <p>Our team works with the latest frameworks and technologies like React, Node.js, and MongoDB to build powerful apps.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </div>
+</div>
+
+<!-- Card 3 -->
+<div class="card-flip">
+    <div class="card-front">
+        <div class="card-content">
+            <h3>User-Centric Design</h3>
+            <p>Deliver exceptional experiences with a user-centric design and continuous enhancements.</p>
+        </div>
+    </div>
+    <div class="card-back">
+        <div class="card-content">
+            <p>Focused on creating intuitive designs that enhance user engagement and satisfaction across all devices.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Heading 2 -->
+<!-- Card 4 -->
+<h1 class="cls"> Custom Web Application Development</h1>
+<div class="card-container">
+    <div class="card-flip">
+        <div class="card-front">
+            <div class="card-content">
+                <h3>Tailored Solutions</h3>
+                <p>"Experience solutions tailored to evolve with your needs."</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>We provide custom web applications that perfectly fit your business model and goals, delivering personalized functionality.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card-flip">
+        <div class="card-front">
+            <div class="card-content">
+                <h3>Scalable Architecture</h3>
+                <p>Designed to scale seamlessly as your business grows.</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>Our solutions are built with scalability in mind, ensuring they grow alongside your business and user base.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card-flip">
+        <div class="card-front">
+            <div class="card-content">
+                <h3>High-Quality Code</h3>
+                <p>Experience reliability with high-quality, robust code.</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>Using best practices and efficient coding standards to build maintainable and high-performance applications.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Heading 3 -->
+<h1 class="cls">Integrated Front-End and Back-End Development</h1>
+<!--card 7-->
+<div class="card-container">
+    <div class="card-flip">
+        <div class="card-front">
+            <div class="card-content">
+                <h3>Responsive UI Design</h3>
+                <p>Enjoy seamless interaction with a fully responsive, user-centered design.</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>We ensure your application is accessible and visually appealing across various devices, providing smooth navigation.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card-flip">
+        <div class="card-front">
+            <div class="card-content">
+                <h3>Seamless Back-End Integration</h3>
+                <p> Achieve flawless functionality with seamless back-end integration.</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>Our back-end systems are robust and secure, ensuring seamless data processing and fast response times.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="card-flip">
+        <div class="card-front">
+            <div class="card-content">
+                <h3>Real-Time Interactions</h3>
+                <p> Engage instantly with real-time interactions.</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>With technologies like WebSockets, we enable real-time updates, enhancing the overall user experience.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 4th sub heading -->
+<h1 class="cls">Continuous Support and Maintenance</h1>
+<!-- Container for three flip cards side by side -->
+<div class="card-container">
+    <!-- Card 1 -->
+    <div class="card-flip">
+        <div class="card-front">
+            <div class="card-content">
+                <h3>Regular Updates</h3>
+                <p>Keep your system current with regular updates and continuous improvements</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>We provide regular updates and improvements to keep your application aligned with the latest technological trends.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card-flip">
+        <div class="card-front">
+            <div class="card-content">
+                <h3>Security Enhancements</h3>
+                <p>Protect your assets with ongoing security enhancements</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>Ongoing monitoring and updates to ensure your app is protected from emerging security threats.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-flip">
+        <div class="card-front">
+            <div class="card-content">
+                <h3>Performance Optimization</h3>
+                <p>Ensure peak efficiency with continuous performance optimization.</p>
+            </div>
+        </div>
+        <div class="card-back">
+            <div class="card-content">
+                <p>Continuous optimization to improve speed, reduce load times, and enhance overall user experience.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="services" class="our-services section">
+  <div class="services-right-dec">
+    <img src="assets/images/services-right-dec.png" alt="">
+  </div>
+  <div class="container">
+    <div class="services-left-dec">
+      <img src="assets/images/services-left-dec.png" alt="">
+    </div>
+    <div class="row">
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="owl-carousel owl-services">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="about" class="about-us section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 align-self-center">
+        
+      </div>
+      <div class="col-lg-6">
+        <div class="section-heading">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="fact-item">
+                <div class="count-area-content">
+                </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="fact-item">
+                <div class="count-area-content">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="fact-item">
+                <div class="count-area-content">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="portfolio" class="our-portfolio section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+        <div class="section-heading">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="owl-carousel owl-portfolio">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="about footer-item">
+            <div class="logo">
+              <a href="#"><img src="assets/images/1.png"></a>
+            </div>
+            <a href="#">mail@masgarti.com</a>
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="services footer-item">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">SEO Development</a></li>
+              <li><a href="#">Business Growth</a></li>
+              <li><a href="#">Social Media Managment</a></li>
+              <li><a href="#">Website Optimization</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="community footer-item">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="#">Digital Marketing</a></li>
+              <li><a href="#">Business Ideas</a></li>
+              <li><a href="#">Website Checkup</a></li>
+              <li><a href="#">Page Speed Test</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="subscribe-newsletters footer-item">
+            <h4>Subscribe Newsletters</h4>
+            <p>Get our latest news and ideas to your inbox</p>
+            <form action="#" method="get">
+              <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+              <button type="submit" id="form-submit" class="main-button "><i class="fa fa-paper-plane-o"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="copyright">
+            <p>Copyright © 2021 Onix Digital Co., Ltd. All Rights Reserved. 
+            <br>
+            Designed by <a rel="nofollow" href="https://templatemo.com" title="free CSS templates">TemplateMo</a><br>
+            Distributed by <a href="https://themewagon.com">Themewagon</a>
+          </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+<!-- Scripts -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/animation.js"></script>
+<script src="assets/js/imagesloaded.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/navigation.js"></script>
+
+
+
+<script>
+// Acc
+  $(document).on("click", ".naccs .menu div", function() {
+    var numberIndex = $(this).index();
+
+    if (!$(this).is("active")) {
+        $(".naccs .menu div").removeClass("active");
+        $(".naccs ul li").removeClass("active");
+
+        $(this).addClass("active");
+        $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
+
+        var listItemHeight = $(".naccs ul")
+          .find("li:eq(" + numberIndex + ")")
+          .innerHeight();
+        $(".naccs ul").height(listItemHeight + "px");
+      }
+  });
+</script>
+    
+</body>
+</html>

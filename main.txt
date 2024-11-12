@@ -1,0 +1,69 @@
+<main>
+    <section class="hero">
+        <h1>Web Development</h1>
+        <p>Welcome to the Web Development page. Here, we specialize in building modern, responsive, and high-performing web applications.</p>
+    </section>
+
+    <!-- Additional Content -->
+    <section class="services-info">
+        <h2>Our Web Development Services</h2>
+        <ul>
+            <li>Custom Web Applications</li>
+            <li>Full-Stack Development</li>
+            <li>Front-End & Back-End Solutions</li>
+            <li>Responsive Design & Optimization</li>
+        </ul>
+    </section>
+</main>
+------------------
+cards frm 4 to 6
+------------------
+<div class="card-flip">
+  <div class="card-front">
+      <div class="card-content">
+          <h3>UX Design</h3>
+          <p>Our user-centered approach is focused on crafting seamless, intuitive, and engaging digital experiences.</p>
+      </div>
+  </div>
+  <div class="card-back">
+      <div class="card-content">
+          <h3>UX Design</h3>
+          <p>web app is easy to navigate, visually appealing, and designed with your customers</p>
+          <a href="#" class="btn">Learn More</a>
+      </div>
+  </div>
+</div>
+
+<!-- Card 5 -->
+<div class="card-flip">
+  <div class="card-front">
+      <div class="card-content">
+          <h3>UX Design</h3>
+          <p>Our user-centered approach is focused on crafting seamless, intuitive, and engaging digital experiences.</p>
+      </div>
+  </div>
+  <div class="card-back">
+      <div class="card-content">
+          <h3>UX Design</h3>
+          <p>web app is easy to navigate, visually appealing, and designed with your customers</p>
+          <a href="#" class="btn">Learn More</a>
+      </div>
+  </div>
+</div>
+
+<!-- Card 6 -->
+<div class="card-flip">
+  <div class="card-front">
+      <div class="card-content">
+          <h3>UX Design</h3>
+          <p>Our user-centered approach is focused on crafting seamless, intuitive, and engaging digital experiences.</p>
+      </div>
+  </div>
+  <div class="card-back">
+      <div class="card-content">
+          <h3>UX Design</h3>
+          <p>web app is easy to navigate, visually appealing, and designed with your customers</p>
+          <a href="#" class="btn">Learn More</a>
+      </div>
+  </div>
+</div>
